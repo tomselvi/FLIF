@@ -619,6 +619,14 @@ FLIF_DLLIMPORT void FLIF_API flif_image_free_metadata(FLIF_IMAGE* image, unsigne
     catch(...) {}
 }
 
+FLIF_DLLEXPORT void FLIF_API flif_image_write_row_RGB8(FLIF_IMAGE* image, uint32_t row, const void* buffer, size_t buffer_size_bytes) {
+    try
+    {
+        image->write_row_RGB8(row, buffer, buffer_size_bytes);
+    }
+    catch(...) {}
+}
+
 FLIF_DLLEXPORT void FLIF_API flif_image_write_row_RGBA8(FLIF_IMAGE* image, uint32_t row, const void* buffer, size_t buffer_size_bytes) {
     try
     {
